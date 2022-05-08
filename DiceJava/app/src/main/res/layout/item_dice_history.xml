@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/rounded"
+    >
+
+    <TextView
+        android:id="@+id/idSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="9"
+        android:layout_gravity="left|center"
+        android:textColor="@color/white"
+        android:paddingStart="30dp"
+        android:fontFamily="@font/titan_one_regular"/>
+
+    <TextView
+        android:id="@+id/tv_dice_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        android:paddingVertical="20dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:text="7-7"
+        android:paddingStart="90dp"
+        android:fontFamily="@font/titan_one_regular"/>
+
+
+    <TextView
+        android:id="@+id/idDubla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dubla"
+        android:layout_gravity="center|right"
+        android:textColor="@color/red"
+        android:textSize="20dp"
+        android:paddingEnd="20dp"
+        android:fontFamily="@font/titan_one_regular"/>
+
+</FrameLayout>

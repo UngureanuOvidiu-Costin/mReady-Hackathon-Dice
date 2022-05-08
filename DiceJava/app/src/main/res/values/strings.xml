@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Dice</string>
+
+    <!-- DICE -->
+    <string name="dice_see_history_button"><u>Vezi tot istoricul</u></string>
+    <string name="dice_roll_button">Învârte zarurile</string>
+    <string name="dice_shake_hint">… sau dă shake</string>
+    <string name="dice_previous_roll">Zarul anterior</string>
+
+    <!-- HISTORY -->
+    <string name="history_title">Istoric</string>
+
+    <!-- DIALOG DOUBLE -->
+    <string name="dialog_double_title">Ai dat dubla!</string>
+    <string name="dialog_double_message">Ai dat dubla!</string>
+
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:background="@drawable/bg_pattern"
+    >
+
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="16dp"
+        android:navigationIcon="@drawable/ic_nav_back">
+
+        <TextView
+            android:id="@+id/tv_history_title"
+            style="@style/AppTheme.Widget.TextView.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/history_title"
+            android:textSize="24sp" />
+    </Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/idDice"
+            android:layout_width="197dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="114dp"
+            android:layout_marginTop="210dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="495dp"
+            android:src="@drawable/illustration_empty_history" />
+
+
+        <TextView
+            android:id="@+id/idTextViewNu"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="366dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginBottom="349dp"
+            android:fontFamily="@font/titan_one_regular"
+            android:text="Nu ai istorica inca"
+            android:textAlignment="center"
+            android:textColor="#D87153"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/idTextViewSfat"
+            android:layout_width="349dp"
+            android:layout_height="123dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="529dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="194dp"
+            style="@style/AppTheme.Widget.TextView.Regular"
+            android:text="Dă shake sau învârte zarurile, aici vor apărea toate scorurile tale"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_history"
+            android:layout_width="match_parent"
+            android:layout_height="790dp"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"
+
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </RelativeLayout>
+
+
+</FrameLayout>

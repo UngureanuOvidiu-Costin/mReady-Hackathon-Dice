@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:background="@drawable/bg_pattern"
+    tools:ignore="ContentDescription">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bg_footer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_shake"
+        app:layout_constraintVertical_bias="1"
+        tools:ignore="ContentDescription" />
+
+    <FrameLayout
+        android:id="@+id/container_history_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bg_history_preview"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="48dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AppTheme.Widget.TextView.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dice_previous_roll" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_nav_history" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="28dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/illustration_dice_title"
+        app:layout_constraintDimensionRatio="h, 126:304"
+        app:layout_constraintTop_toBottomOf="@id/container_history_preview" />
+
+    <ImageView
+        android:id="@+id/iv_dice_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/illustration_dice_face_1"
+        app:layout_constraintEnd_toStartOf="@id/iv_dice_right"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_title" />
+
+    <ImageView
+        android:id="@+id/iv_dice_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:src="@drawable/illustration_dice_face_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_dice_left"
+        app:layout_constraintTop_toTopOf="@id/iv_dice_left" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/idAnimatieDice"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="52dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/iv_dice_right"
+        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_title"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/dice_shuffle_02"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/idAnimatieDice2"
+        android:layout_width="109dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="40dp"
+        android:src="@drawable/illustration_dice_face_2"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/iv_dice_left"
+        app:layout_constraintTop_toTopOf="@id/iv_dice_left"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/dice_shuffle_02"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_roll"
+        style="@style/AppTheme.Widget.MaterialComponents.UnelevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="@string/dice_roll_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_dice_left" />
+
+    <TextView
+        android:id="@+id/tv_shake"
+        style="@style/AppTheme.Widget.TextView.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="2dp"
+        android:gravity="center_vertical"
+        android:text="@string/dice_shake_hint"
+        android:textSize="16sp"
+        app:drawableEndCompat="@drawable/ic_shake"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_roll" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
